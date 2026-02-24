@@ -6,6 +6,7 @@ require __DIR__ . '/controllers/AlunniController.php';
 
 $app = AppFactory::create();
 
+$app->addBodyParsingMiddleware();
 $app->get('/alunni', "AlunniController:index");
 $app->get('/alunni/{id}', "AlunniController:show");
 $app->post('/alunni', "AlunniController:create");
