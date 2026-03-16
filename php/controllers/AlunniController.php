@@ -54,7 +54,7 @@ class AlunniController
     $id = (int) $args['id'];
     $nome = $dati['nome'];
     $cognome = $dati['cognome'];
-    $result = $mysqli_connection->query("UPDATE alunni SET nome = '$nome', cognome = '$cognome' WHERE id = $id)");
+    $result = $mysqli_connection->query("UPDATE alunni SET nome = '$nome', cognome = '$cognome' WHERE id = $id");
 
     if ($result) {
         $response_data = [
